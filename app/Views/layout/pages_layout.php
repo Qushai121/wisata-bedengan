@@ -15,9 +15,9 @@
     <?= $this->include('shared/navbar'); ?>
     <div class="xl:mx-56">
         <?= $this->renderSection('body'); ?>
-        <div>
-            <?= $this->include('shared/footer'); ?>
-        </div>
+    </div>
+    <div>
+        <?= $this->include('shared/footer'); ?>
     </div>
 </body>
 

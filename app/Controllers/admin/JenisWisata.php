@@ -93,12 +93,13 @@ class JenisWisata extends BaseController
             'user_id' => htmlspecialchars(session('user_id')),
         ];
 
-        $validasiModel = $this->ModelJenisWisata->where('user_id', session('user_id'))->update($id, $data);
+        $validasiModel = $this->ModelJenisWisata->where(['user_id' => session('user_id')])->update($id, $data);
 
         $error = [
             'validasi' => $this->ModelJenisWisata->errors(),
             'error' => 'Data Gagal Disimpan'
         ];
+        
         if (!$validasiModel) {
             return redirect()->back()->withInput()->with('errors', $error);
         }

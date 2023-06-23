@@ -1,40 +1,3 @@
-<?php
-
-$dataMenuArticles = [
-    [
-        'link' => [
-            'info-lokasi',
-        ],
-        'keterangan' => 'Info & Lokasi'
-    ],
-    [
-        'link' => [
-            'jenis-wisata',
-        ],
-        'keterangan' => 'Jenis Wisata & Harga Tiket'
-    ],
-    [
-        'link' => [
-            [
-                'link' => 'fasilitas-penyewaaan',
-                'keterangan' => 'Fasilitas Penyewaaan'
-            ],
-            [
-                'link' => 'fasilitas-umum',
-                'keterangan' => 'Fasilitas Umum'
-            ],
-        ],
-        'keterangan' => 'Fasilitas',
-    ],
-    [
-        'link' => [
-            'galeri',
-        ],
-        'keterangan' => 'Galeri / Ulasan'
-    ]
-];
-
-?>
 
 <div class="navbar border-b-4 shadow-xl border-black">
     <div class="flex-1 ">
@@ -62,7 +25,7 @@ $dataMenuArticles = [
 
             <li><a href="<?= site_url('home'); ?>">Home Page</a></li>
             
-            <?php foreach ($dataMenuArticles as $dataMenuArticle) : ?>
+            <?php foreach (menuarticles() as $dataMenuArticle) : ?>
                 <?php if (count($dataMenuArticle['link']) > 1) : ?>
                     <li class="dropdown dropdown-end dropdown-hover">
                         <p tabindex="0" class=" py-4"><?= $dataMenuArticle['keterangan']; ?></p>
@@ -110,7 +73,7 @@ $dataMenuArticles = [
 
             <li><a href="<?= site_url('home'); ?>">Home Page</a></li>
 
-            <?php foreach ($dataMenuArticles as $dataMenuArticle) : ?>
+            <?php foreach (menuarticles() as $dataMenuArticle) : ?>
 
                 <?php if (count($dataMenuArticle['link']) > 1) : ?>
                     <details class="dropdown dropdown-left ">

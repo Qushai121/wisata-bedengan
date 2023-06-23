@@ -2,7 +2,7 @@
 
 <?= $this->section('body'); ?>
 
-<div class="lg:flex lg:mx-36 ">
+<div class="lg:flex h-[90vh] lg:mx-36 ">
     <div>
         <div class="py-3 px-4 flex flex-col gap-6">
             <h1 class="text-2xl font-semibold bg-stone-300 shadow-lg p-4 rounded-lg">
@@ -53,6 +53,13 @@
                     <h1 class="text-xl font-medium">Rute Dari Surabaya</h1>
                     <a class="flex items-center " href="https://www.google.com/maps/dir/Surabaya,+Kota+SBY,+Jawa+Timur/Bumi+Perkemahan+Bedengan,+Selorejo,+Jl.+Raya+Selokerto,+Godehan,+Selorejo,+Kec.+Dau,+Kabupaten+Malang,+Jawa+Timur+65151/@-7.5990994,112.6412742,10z/data=!4m8!4m7!1m2!1m1!1s0x2dd7fbf8381ac47f:0x3027a76e352be40!1m2!1m1!1s0x2e7883de82b88e3b:0xef56b8f39f00d6e0!3e0">
                         <p class="underline text-blue-400">2 jam 29 mnt (105,2 km) lewat Jl. Tol Pandaan - Malang</p>
+                    </a>
+                </div>
+                <div class="mt-3">
+                    <h1 class="text-xl font-medium">Rute Dari Rumah Yoshua</h1>
+                    <a class="flex items-center " href="https://www.google.com/maps/dir/PLUMPANG+SEMPER,+Jalan+Plumpang+Semper,+RT.8%2FRW.1,+Tugu+Utara,+Jakarta+Utara,+Daerah+Khusus+Ibukota+Jakarta/Bumi+Perkemahan+Bedengan,+Selorejo,+Jl.+Raya+Selokerto,+Godehan,+Selorejo,+Kec.+Dau,+Kabupaten+Malang,+Jawa+Timur+65151/@-7.0233711,108.4969826,8z/data=!3m1!4b1!4m14!4m13!1m5!1m1!1s0x2e6a1ffc3833f4b9:0xeca86d1b790b8a53!2m2!1d106.9049889!2d-6.1295975!1m5!1m1!1s0x2e7883de82b88e3b:0xef56b8f39f00d6e0!2m2!1d112.5304602!2d-7.9397359!3e0?entry=ttu">
+                        <p class="underline text-blue-400">11 jam 7 mnt (863 km)
+melalui Jl. Tol Salatiga - Kertosono/Jl. Tol Solo - Kertosono</p>
                     </a>
                 </div>
             </div>

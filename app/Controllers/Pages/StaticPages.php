@@ -18,15 +18,11 @@ class StaticPages extends BaseController
         $data = [
             'dataForCarosels' => [
                 [
-                    'img' => 'second.webp',
+                    'img' => 'taman-dan-hutan-highland.jpg',
                     'alt' => 'Foto Cuy',
                 ],
                 [
-                    'img' => 'asdasdsa',
-                    'alt' => 'Foto Cuy',
-                ],
-                [
-                    'img' => 'second.webp',
+                    'img' => 'traveloka-susur-sungai-bogor.jpg',
                     'alt' => 'Foto Cuy',
                 ],
                 [
@@ -34,11 +30,15 @@ class StaticPages extends BaseController
                     'alt' => 'Foto Cuy',
                 ],
                 [
-                    'img' => 'second.webp',
+                    'img' => 'tempat-camping-di-puncak-ciputri.jpg',
                     'alt' => 'Foto Cuy',
                 ],
                 [
-                    'img' => '',
+                    'img' => 'wisata-air-terjun-di-camp-bogor.jpg',
+                    'alt' => 'Foto Cuy',
+                ],
+                [
+                    'img' => 'tempat-camping-highland-camp.jpg',
                     'alt' => 'Foto Cuy',
                 ],
             ]

@@ -28,7 +28,7 @@ class JeniswisataModel extends Model
         'wisata_nama'     => 'required|min_length[3]',
         'wisata_description'     => 'required|min_length[8]',
         'wisata_detail' => 'required|min_length[3]',
-        'wisata_thumbnail' => 'mime_in[wisata_thumbnail,image/png,image/jpeg,image/webp]|is_image[wisata_thumbnail]|uploaded[wisata_thumbnail]'
+        'wisata_thumbnail' => 'mime_in[wisata_thumbnail,image/png,image/jpeg,image/webp]|is_image[wisata_thumbnail]'
     ];
 
     protected $validationMessages   = [
@@ -73,7 +73,7 @@ class JeniswisataModel extends Model
         return $builder->get()->getResultArray();
     }
 
-    public function JenisWisataById(int $id): array
+    public function JenisWisataById(int $id)
     {
         $builder = $this->db->table('jeniswisata');
         $builder->select('jeniswisata_id,wisata_nama');

@@ -52,6 +52,5 @@
     </div>
 </div>
 
-<?= $this->include('shared/footer'); ?>
 
 <?= $this->endSection(); ?>

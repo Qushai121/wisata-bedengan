@@ -16,7 +16,6 @@
     <?= $this->include('pages/home/components/comp_article'); ?>
 </div>
 
-
 <script type="module">
     const swiper = new Swiper('.apa', {
         slidesPerView: 1,

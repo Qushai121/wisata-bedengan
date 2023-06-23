@@ -4,21 +4,31 @@ function menuarticles()
 {
     $dataMenuArticles = [
         [
-            'link' => 'info-lokasi',
+            'link' => [
+                'info-lokasi',
+            ],
             'keterangan' => 'Info & Lokasi'
         ],
         [
-            'link' => 'jenis-wisata',
-            'keterangan' => 'Jenis Wisata dan Harga Tiket'
+            'link' => [
+                'jenis-wisata',
+            ],
+            'keterangan' => 'Jenis Wisata & Harga Tiket'
         ],
         [
-            'link' => 'fasilitas-camp',
-            'keterangan' => 'Fasilitas Gratis Fasilitas Penyewaaan'
+            'link' => [
+                [
+                    'link' => 'fasilitas-penyewaaan',
+                    'keterangan' => 'Fasilitas Penyewaaan'
+                ],
+                [
+                    'link' => 'fasilitas-umum',
+                    'keterangan' => 'Fasilitas Umum'
+                ],
+            ],
+            'keterangan' => 'Fasilitas',
         ],
-        [
-            'link' => 'galeri',
-            'keterangan' => 'Galeri / Ulasan'
-        ]
+       
     ];
     return $dataMenuArticles;
 }

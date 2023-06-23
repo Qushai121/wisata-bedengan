@@ -9,17 +9,17 @@ use App\Models\WisataSectionModel;
 class WisataSection extends BaseController
 {
     protected $JeniswisataModel,
-    $WisataSectionModel
-    ;
-    public function __construct() {
+        $WisataSectionModel;
+    public function __construct()
+    {
         $this->JeniswisataModel = new JeniswisataModel();
         $this->WisataSectionModel = new WisataSectionModel();
     }
     public function WisataSectionRender()
     {
         $data = [
-            'JenisWisatas' => $this->JeniswisataModel->where(['user_id'=>session('user_id')])->findAll(),
-            'WisataSections' => $this->WisataSectionModel->findAll()
+            'JenisWisatas' => $this->JeniswisataModel->where(['user_id' => session('user_id')])->findAll(),
+            'WisataSections' => $this->WisataSectionModel->where(['user_id' => session('user_id')])->findAll()
         ];
         return view('admin/pages/wisatasection/admin_wisatasection', $data);
     }
@@ -42,7 +42,7 @@ class WisataSection extends BaseController
             // generate nama sampul
             $data['wisatasection_gambar'] = $fileSampul->getRandomName();
         }
-        
+
         // dd($data);
         $validasiModel =  $this->WisataSectionModel->insert($data);
         $error = [
@@ -70,11 +70,11 @@ class WisataSection extends BaseController
         } else {
             $fileAkhir = $fileSampul->getRandomName();
 
-            if ($this->request->getVar('wisatasection_gambar_lama') != 'default.jpg' && file_exists(base_url("/img/upload/{$fileAkhir}")) ) {
+            if ($this->request->getVar('wisatasection_gambar_lama') != 'default.jpg' && file_exists(base_url("/img/upload/{$fileAkhir}"))) {
                 unlink('img/upload/' . $this->request->getVar('wisatasection_gambar_lama'));
             }
         }
-        
+
         $data = [
             'wisatasection_judul' => htmlspecialchars($this->request->getVar('wisatasection_judul')),
             'wisatasection_deskripsi' => htmlspecialchars($this->request->getVar('wisatasection_deskripsi')),
@@ -83,7 +83,7 @@ class WisataSection extends BaseController
             'user_id' => session('user_id'),
         ];
 
-        $validasiModel = $this->WisataSectionModel->where(['user_id'=>session('user_id')])->update($id, $data);
+        $validasiModel = $this->WisataSectionModel->where(['user_id' => session('user_id')])->update($id, $data);
 
         $error = [
             'validasi' => $this->WisataSectionModel->errors(),
@@ -103,10 +103,10 @@ class WisataSection extends BaseController
     public function deleteWisataSection(int $id)
     {
         $dataFromDb =  $this->WisataSectionModel->where(['wisatasection_id' => $id])->first();
-        if ($dataFromDb['wisatasection_gambar'] != 'default.jpg' && file_exists(base_url("/img/upload/{$dataFromDb['wisatasection_gambar']}")) ) {
+        if ($dataFromDb['wisatasection_gambar'] != 'default.jpg' && file_exists(base_url("/img/upload/{$dataFromDb['wisatasection_gambar']}"))) {
             unlink('img/upload/' . $dataFromDb['wisatasection_gambar']);
         }
-        $this->WisataSectionModel->where(['user_id'=>session('user_id')])->delete($id);
+        $this->WisataSectionModel->where(['user_id' => session('user_id')])->delete($id);
         return redirect()->to(site_url('admin/wisata-section'))->with('success', 'Data Berhasil Di Hapus');
     }
 }
