@@ -1,7 +1,7 @@
 <?= $this->extend('layout/pages_layout'); ?>
 
 <?= $this->section('body'); ?>
-<div class="flex flex-col lg:flex-row lg:flex-wrap my-5 mx-4 gap-2 ">
+<div class="flex flex-col lg:flex-row lg:flex-wrap my-5 mx-4 gap-2 h-full ">
     <?php foreach ($penyewaans as $penyewaan) : ?>
         <div class="bg-stone-200 border-2 rounded-lg border-stone-400 p-14">
             <div>

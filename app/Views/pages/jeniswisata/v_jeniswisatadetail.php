@@ -72,9 +72,7 @@
     <?= $this->include('pages/jeniswisata/v_cardTiket'); ?>
 </div>
 
-<div>
-    <?= $this->include('shared/footer'); ?>
-</div>
+
 <script type="module">
     const swiper = new Swiper('.apa', {
         slidesPerView: 1,

@@ -13,11 +13,13 @@
 
 <body class="h-fit text-stone-700 ">
     <?= $this->include('shared/navbar'); ?>
-    <div class="xl:mx-56">
-        <?= $this->renderSection('body'); ?>
-    </div>
     <div>
-        <?= $this->include('shared/footer'); ?>
+        <div class="xl:mx-56">
+            <?= $this->renderSection('body'); ?>
+        </div>
+        <div class="mt-16">
+            <?= $this->include('shared/footer'); ?>
+        </div>
     </div>
 </body>
 
