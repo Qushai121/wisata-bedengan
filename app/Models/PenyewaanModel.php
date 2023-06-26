@@ -26,7 +26,7 @@ class PenyewaanModel extends Model
     public function joinPenyewaanStatus(): array
     {
         $builder =  $this->db->table('penyewaan');
-        $builder->join('status', 'status.status_id = penyewaan.penyewaan_status ');
+        $builder->join('status', 'status.status_id = penyewaan.penyewaan_status','LEFT' );
         $builder->where('user_id', session('user_id'));
         return $builder->get()->getResultArray();
     }
@@ -34,7 +34,7 @@ class PenyewaanModel extends Model
     public function joinPenyewaanStatusForAll(): array
     {
         $builder =  $this->db->table('penyewaan');
-        $builder->join('status', 'status.status_id = penyewaan.penyewaan_status ');
+        $builder->join('status', 'status.status_id = penyewaan.penyewaan_status','LEFT' );
         $builder->select('penyewaan_nama, penyewaan_detail, penyewaan_lokasi,penyewaan_status, penyewaan_gambar, penyewaan_harga,status_detail ');
         return $builder->get()->getResultArray();
     }

@@ -26,7 +26,7 @@ class FasilitasUmumModel extends Model
    public function FasilitasUmumJoinStatus(): array
    {
       $builder =  $this->db->table('fasilitasumum');
-      $builder->join('status', 'status.status_id = fasilitasumum.fasilitasumum_status ');
+      $builder->join('status', 'status.status_id = fasilitasumum.fasilitasumum_status ','LEFT');
       $builder->where('user_id', session('user_id'));
       return $builder->get()->getResultArray();
    }
@@ -34,7 +34,7 @@ class FasilitasUmumModel extends Model
    public function joinFasilitasUmumStatusForAll(): array
    {
       $builder =  $this->db->table('fasilitasumum');
-      $builder->join('status', 'status.status_id = fasilitasumum.fasilitasumum_status ');
+      $builder->join('status', 'status.status_id = fasilitasumum.fasilitasumum_status ','LEFT');
       return $builder->get()->getResultArray();
    }
 }
